@@ -2,10 +2,10 @@ package service
 
 import (
 	"context"
-	dto "fp-mbd-amidrive/domain/model/dto"
-	entity "fp-mbd-amidrive/domain/model/entity"
-	repository "fp-mbd-amidrive/domain/repository"
-	"fp-mbd-amidrive/helpers"
+	dto "golang-gin-gorm-template/domain/model/dto"
+	entity "golang-gin-gorm-template/domain/model/entity"
+	repository "golang-gin-gorm-template/domain/repository"
+	"golang-gin-gorm-template/helpers"
 
 	"github.com/mashingan/smapping"
 )

@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"fp-mbd-amidrive/common"
-	service "fp-mbd-amidrive/domain/service"
-	"fp-mbd-amidrive/helpers"
+	"golang-gin-gorm-template/common"
+	service "golang-gin-gorm-template/domain/service"
+	"golang-gin-gorm-template/helpers"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

@@ -1,10 +1,10 @@
 package controller
 
 import (
-	"fp-mbd-amidrive/common"
-	dto "fp-mbd-amidrive/domain/model/dto"
-	entity "fp-mbd-amidrive/domain/model/entity"
-	service "fp-mbd-amidrive/domain/service"
+	"golang-gin-gorm-template/common"
+	dto "golang-gin-gorm-template/domain/model/dto"
+	entity "golang-gin-gorm-template/domain/model/entity"
+	service "golang-gin-gorm-template/domain/service"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

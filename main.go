@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fp-mbd-amidrive/common"
-	"fp-mbd-amidrive/config"
-	repository "fp-mbd-amidrive/domain/repository"
-	service "fp-mbd-amidrive/domain/service"
-	controller "fp-mbd-amidrive/http/controller"
-	middleware "fp-mbd-amidrive/http/middleware"
-	routes "fp-mbd-amidrive/http/routes"
+	"golang-gin-gorm-template/common"
+	"golang-gin-gorm-template/config"
+	repository "golang-gin-gorm-template/domain/repository"
+	service "golang-gin-gorm-template/domain/service"
+	controller "golang-gin-gorm-template/http/controller"
+	middleware "golang-gin-gorm-template/http/middleware"
+	routes "golang-gin-gorm-template/http/routes"
 	"net/http"
 	"os"
 

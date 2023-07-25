@@ -2,7 +2,7 @@ package repository
 
 import (
 	"context"
-	entity "fp-mbd-amidrive/domain/model/entity"
+	entity "golang-gin-gorm-template/domain/model/entity"
 
 	"github.com/google/uuid"
 	"gorm.io/gorm"

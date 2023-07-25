@@ -1,7 +1,7 @@
 package common
 
 import (
-	entity "fp-mbd-amidrive/domain/model/entity"
+	entity "golang-gin-gorm-template/domain/model/entity"
 	"math"
 
 	"gorm.io/gorm"

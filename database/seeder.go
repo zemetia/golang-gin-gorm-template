@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fp-mbd-amidrive/config"
-	seeder "fp-mbd-amidrive/database/seeders"
+	"golang-gin-gorm-template/config"
+	seeder "golang-gin-gorm-template/database/seeders"
 	"net/http"
 
-	"fp-mbd-amidrive/common"
+	"golang-gin-gorm-template/common"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"

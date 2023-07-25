@@ -1,4 +1,4 @@
-module fp-mbd-amidrive
+module golang-gin-gorm-template
 
 go 1.20
 

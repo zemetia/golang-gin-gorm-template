@@ -1,9 +1,9 @@
 package routes
 
 import (
-	service "fp-mbd-amidrive/domain/service"
-	controller "fp-mbd-amidrive/http/controller"
-	middleware "fp-mbd-amidrive/http/middleware"
+	service "golang-gin-gorm-template/domain/service"
+	controller "golang-gin-gorm-template/http/controller"
+	middleware "golang-gin-gorm-template/http/middleware"
 
 	"github.com/gin-gonic/gin"
 )

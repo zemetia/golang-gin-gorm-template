@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"fp-mbd-amidrive/helpers"
+	"golang-gin-gorm-template/helpers"
 
 	"gorm.io/gorm"
 )
