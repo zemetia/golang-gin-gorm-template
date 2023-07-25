@@ -36,7 +36,7 @@ func main() {
 
 	server := gin.Default()
 	server.Use(middleware.CORSMiddleware())
-	routes.UserRoutes(server, userController, jwtService)
+	routes.UserRoutes(server, userController, userRepository, jwtService)
 
 	port := os.Getenv("PORT")
 	ip := os.Getenv("IP")
