@@ -9,6 +9,26 @@ import (
 	"gorm.io/gorm"
 )
 
+func createDatabase() (*gorm.DB, error) {
+	dbUser := os.Getenv("DB_USER")
+	dbPass := os.Getenv("DB_PASS")
+	dbHost := os.Getenv("DB_HOST")
+	dbName := os.Getenv("DB_NAME")
+	dbPort := os.Getenv("DB_PORT")
+
+	dsn := fmt.Sprintf("%v:%v@tcp(%v:%v)/information_schema?charset=utf8mb4&parseTime=True&loc=Local", dbUser, dbPass, dbHost, dbPort)
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+
+	createDatabaseCommand := fmt.Sprintf("CREATE DATABASE `%s`", dbName)
+	db.Exec(createDatabaseCommand)
+	db.Commit()
+
+	dsn = fmt.Sprintf("%v:%v@tcp(%v:%v)/%v?charset=utf8mb4&parseTime=True&loc=Local", dbUser, dbPass, dbHost, dbPort, dbName)
+	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
+
+	return db, err
+}
+
 func SetupDatabaseConnection() *gorm.DB {
 	dbUser := os.Getenv("DB_USER")
 	dbPass := os.Getenv("DB_PASS")
@@ -20,8 +40,12 @@ func SetupDatabaseConnection() *gorm.DB {
 	dsn := fmt.Sprintf("%v:%v@tcp(%v:%v)/%v?charset=utf8mb4&parseTime=True&loc=Local", dbUser, dbPass, dbHost, dbPort, dbName)
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		fmt.Println(err)
-		panic(err)
+		fmt.Println("Database not Found! Trying to create a new database instead!")
+		db, err = createDatabase()
+		if err != nil {
+			fmt.Println(err)
+			panic(err)
+		}
 	}
 
 	if err := db.AutoMigrate(
