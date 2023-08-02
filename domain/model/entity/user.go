@@ -15,6 +15,7 @@ type User struct {
 	Role           string `json:"role"`
 	MembershipTier string `json:"membership"`
 	PhotoURL       string `json:"photo_url"`
+	Test           string `json:"test"`
 	Timestamp
 }
 

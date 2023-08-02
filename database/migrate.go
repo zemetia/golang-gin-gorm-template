@@ -1,5 +1,5 @@
 package main
 
-func test() {
+func Migrate() {
 
 }
